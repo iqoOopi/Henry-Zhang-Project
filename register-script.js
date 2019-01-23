@@ -1,12 +1,10 @@
 var formRest = document.getElementById("formRest");
 formRest.addEventListener("click", function (event) {
     event.preventDefault();
- 
-
-    // var answer=confirm("Are you sure to reset the form");
-    // if (answer) {
-    //     console.log("user want to reset");
-    // }
+    var answer=confirm("Are you sure to reset the form");
+    if (answer) {
+        console.log("user want to reset");
+    }
 })
 formRest.addEventListener("mouseover",function(event){
     var popup = document.getElementById("popupText");
