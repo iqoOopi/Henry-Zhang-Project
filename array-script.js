@@ -24,10 +24,8 @@ for (var i=0;i<=imgArray.length;i++){
     if (i<4){
         img=document.createElement("img");
         img.setAttribute("src",imgArray[i]);
-        img.setAttribute("id","bannerImg");
-        var j=i;
-        console.log(j);
-        img.addEventListener("click",function(){ showDescript(j); });
+        img.setAttribute("id","bannerImg"+i);
+        img.addEventListener("click",showDescript);
         td.appendChild(img);
     }
     if(i==0){
@@ -35,19 +33,19 @@ for (var i=0;i<=imgArray.length;i++){
         td.setAttribute('rowSpan',imgArray.length+1);
         td.setAttribute("id","description");
         td.appendChild(document.createTextNode("Click One Image For Description"));
+        td.style.fontSize="40px";
     }
     
 }
 position.appendChild(tbl);
-function showDescript (j){
+function showDescript (){
+   var currentImage= event.currentTarget;
+   var id=currentImage.getAttribute("id").substring(9);
+   
     var td=document.getElementById("description");
-    console.log(i);
-    // td.appendChild(document.createTextNode(imgDescri[i]));
-    td.appendChild(document.createTextNode(imgDescri[j]));
+    td.innerHTML=imgDescri[id];
+  
 }
 
-
-// var images=document.getElementsByClassName("bannerImg");
-// images
 
 
