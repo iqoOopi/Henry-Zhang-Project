@@ -37,10 +37,46 @@ header {
   padding: 1em;
   resize: vertical;
 }
-.myForm > button
-{
+
+.popupContainer {
   grid-column: controls;
   grid-row: auto;
+  border: none;
+  /* padding: 1em; */
+  position: relative;
+  display:inline-block;
+  width:100%;
+  
+}
+.popupContainer .popupText{
+visibility:hidden;
+position: absolute;
+z-index: 10;
+bottom:110%;
+left:46%;
+background-color:black;
+color: white;
+cursor: pointer;
+}
+
+/* Popup arrow */
+.popupContainer .popuptext::after {
+  content: "";
+  position: absolute;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popupContainer .show {
+  visibility: visible;
+  /* width:100%; */
+}
+
+.button
+{
+  width:100%;
   border: none;
   padding: 1em;
   resize: vertical;
@@ -48,25 +84,4 @@ header {
 .button:hover{
   background-color:goldenrod;
   color:white;
-}
-.popupContainer {
-  grid-column: controls;
-  grid-row: auto;
-  border: none;
-  padding: 1em;
-  position: relative;
-  display:inline-block;
-  
-}
-.popupContainer .popupText{
-visibility:hidden;
-position: absolute;
-z-index: 10;
-background-color:black;
-color: white;
-}
-
-.popupContainer .show {
-  visibility: visible;
-  /* width:100%; */
 }
