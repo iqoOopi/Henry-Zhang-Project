@@ -17,7 +17,14 @@ tbl.style.width = '80%';
 tbl.style.textAlign = "center";
 tbl.style.marginLeft="auto";
 tbl.style.marginRight="auto";
-
+tr=tbl.insertRow();
+// var td=tr.insertCell();
+th=document.createElement("th");
+th.appendChild(document.createTextNode("Image"));
+tr.appendChild(th);
+th=document.createElement("th");
+th.appendChild(document.createTextNode("Description"));
+tr.appendChild(th);
 for (var i=0;i<=imgArray.length;i++){
     
     var tr=tbl.insertRow();
@@ -33,7 +40,7 @@ for (var i=0;i<=imgArray.length;i++){
     }
     if(i==0){
         var td=tr.insertCell();
-        td.setAttribute('rowSpan',imgArray.length+1);
+        td.setAttribute('rowSpan',imgArray.length);
         td.setAttribute("id","description");
         td.appendChild(document.createTextNode("Click One Image For Description"));
         td.style.fontSize="40px";
