@@ -15,6 +15,8 @@ tbl = document.createElement("table");
 tbl.style.tableLayout = "fixed";
 tbl.style.width = '80%';
 tbl.style.textAlign = "center";
+tbl.style.marginLeft="auto";
+tbl.style.marginRight="auto";
 
 for (var i=0;i<=imgArray.length;i++){
     
@@ -26,6 +28,7 @@ for (var i=0;i<=imgArray.length;i++){
         img.setAttribute("src",imgArray[i]);
         img.setAttribute("id","bannerImg"+i);
         img.addEventListener("click",showDescript);
+        img.style.width="200px";
         td.appendChild(img);
     }
     if(i==0){
