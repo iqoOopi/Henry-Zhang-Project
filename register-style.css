@@ -17,7 +17,7 @@ header {
   flex-wrap:wrap;
 }
 
-.myForm {
+.registerForm {
   background-image: url("pic/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -30,13 +30,14 @@ header {
   grid-gap: .8em;
   padding: 1.2em;
 }
-.myForm > label  {
+.registerForm > label  {
   grid-column: labels;
   grid-row: auto;
 }
-.myForm > input,
-.myForm > textarea
-{
+
+.registerForm input,.registerForm textarea {
+
+  width:100%;
   grid-column: controls;
   grid-row: auto;
   border: none;
@@ -62,8 +63,8 @@ left:50%;
 background-color:black;
 color: white;
 cursor: pointer;
-width:100px;
-margin-left:-50px;
+width:50%;
+margin-left:-25%;
 text-align:center;
 }
 
