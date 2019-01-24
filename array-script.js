@@ -20,7 +20,6 @@ tbl.style.textAlign = "center";
 tbl.style.marginLeft = "auto";
 tbl.style.marginRight = "auto";
 tr = tbl.insertRow();
-// var td=tr.insertCell();
 th = document.createElement("th");
 th.appendChild(document.createTextNode("Image"));
 tr.appendChild(th);
@@ -52,12 +51,13 @@ for (var i = 0; i <= imgArray.length; i++) {
 position.appendChild(tbl);
 function showDescript() {
     var currentImage = event.currentTarget;
+    
     //get rows then get rowIndex which is ID
     var rowNumber = currentImage.parentNode.parentNode.rowIndex;
     console.log(currentImage.parentNode.parentNode);
     console.log(rowNumber);
-    // var id = currentImage.getAttribute("id").substring(9);
 
+    // var id = currentImage.getAttribute("id").substring(9);
     // var td = document.getElementById("description");
 
     //get content from particular table positon
