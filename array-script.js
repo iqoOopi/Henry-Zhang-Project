@@ -35,7 +35,7 @@ for (var i = 0; i <= imgArray.length; i++) {
     if (i < imgArray.length) {
         img = document.createElement("img");
         img.setAttribute("src", imgArray[i]);
-        img.setAttribute("id", "bannerImg" + i);
+        // img.setAttribute("id", "bannerImg" + i);
         img.addEventListener("click", showDescript);
         img.style.width = "200px";
         td.appendChild(img);
@@ -43,7 +43,7 @@ for (var i = 0; i <= imgArray.length; i++) {
     if (i == 0) {
         var td = tr.insertCell();
         td.setAttribute('rowSpan', imgArray.length);
-        td.setAttribute("id", "description");
+        // td.setAttribute("id", "description");
         td.appendChild(document.createTextNode("Click One Image For Description"));
         td.style.fontSize = "40px";
     }
@@ -52,12 +52,16 @@ for (var i = 0; i <= imgArray.length; i++) {
 position.appendChild(tbl);
 function showDescript() {
     var currentImage = event.currentTarget;
-    var id = currentImage.getAttribute("id").substring(9);
+    //get rows then get rowIndex which is ID
+    var rowNumber = currentImage.parentNode.parentNode.rowIndex;
+    console.log(currentImage.parentNode.parentNode);
+    console.log(rowNumber);
+    // var id = currentImage.getAttribute("id").substring(9);
 
     // var td = document.getElementById("description");
 
     //get content from particular table positon
-    tbl.rows[1].cells[1].innerHTML = imgDescri[id];
+    tbl.rows[1].cells[1].innerHTML = imgDescri[rowNumber-1];
 
 }
 
