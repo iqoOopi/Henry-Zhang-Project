@@ -12,10 +12,10 @@ imgDescri[3] = "num 4 image:TaiShan";
 
 
 var imgLink = new Array();
-imgLink[0] ="https://www.google.ca/";
-imgLink[1]="http://www.baidu.com/";
-imgLink[2]="https://www.bing.com/";
-imgLink[3]="https://ca.yahoo.com/";
+imgLink[0] = "https://www.google.ca/";
+imgLink[1] = "http://www.baidu.com/";
+imgLink[2] = "https://www.bing.com/";
+imgLink[3] = "https://ca.yahoo.com/";
 
 
 var position = document.getElementById("main-banner");
@@ -43,8 +43,9 @@ for (var i = 0; i <= imgArray.length; i++) {
         img.setAttribute("src", imgArray[i]);
         // img.setAttribute("id", "bannerImg" + i);
         img.addEventListener("mouseover", showDescript);
-        img.addEventListener("click",showWebsite);
+        img.addEventListener("click", showWebsite);
         img.style.width = "200px";
+        img.style.cursor = "pointer";
         td.appendChild(img);
     }
     if (i == 0) {
@@ -59,7 +60,7 @@ for (var i = 0; i <= imgArray.length; i++) {
 position.appendChild(tbl);
 function showDescript() {
     var currentImage = event.currentTarget;
-    
+
     //get rows then get rowIndex which is ID
     var rowNumber = currentImage.parentNode.parentNode.rowIndex;
     console.log(currentImage.parentNode.parentNode);
@@ -69,18 +70,19 @@ function showDescript() {
     // var td = document.getElementById("description");
 
     //get content from particular table positon
-    tbl.rows[1].cells[1].innerHTML = imgDescri[rowNumber-1];
+    tbl.rows[1].cells[1].innerHTML = imgDescri[rowNumber - 1];
 
 }
 
-function showWebsite(){
+function showWebsite() {
     var currentImage = event.currentTarget;
-    
+
     //get rows then get rowIndex which is ID
     var rowNumber = currentImage.parentNode.parentNode.rowIndex;
-    var myWindow=window.open(imgLink[rowNumber-1]);
-    setTimeout(function(){myWindow.close();
-    },2000);
+    var myWindow = window.open(imgLink[rowNumber - 1]);
+    setTimeout(function () {
+        myWindow.close();
+    }, 2000);
 }
 
 

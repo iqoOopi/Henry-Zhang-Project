@@ -6,6 +6,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="simple-grid.css">
     <link rel="stylesheet" type="text/css" href="register-style.css">
+    <?php include('bouncer.php') ?>
 </head>
 
 <body>
@@ -44,12 +45,8 @@
         <label fro="customerPostalCode">Postal Code</label>
         <div class="popupContainer">
             <span class="popupText" id="postalCodePopupText">Example:T3K1H1</span>
-            <input type="text" name="customerPostalCode" id="customerPostalCode" >
+            <input type="text" name="customerPostalCode" id="customerPostalCode">
         </div>
-        <!-- <label for="emailAddress">Email </label>
-        <input type="email" name="emailAddress" id="emailAddress">
-        <label for="comments">Comments</label>
-        <textarea name="comments" id="comments" maxlength="500"></textarea> -->
         <div class="popupContainer">
             <span class="popupText" id="resetPopupText">Are you sure?</span>
             <input type="reset" class="button" id="formRest" value="Reset">

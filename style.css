@@ -9,6 +9,7 @@ html{
     /* background: #5C97FF; */
     overflow: hidden;  
 }
+/* set background img to opacity 0.4 as img don't have opacity property, need to do it in bgimg */
 .main-container:before{
     content: ' ';
     display: block;
@@ -66,5 +67,6 @@ header img{
   }
 .grid-image2 img{
     max-width:100%;
+    
   
 }

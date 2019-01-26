@@ -28,6 +28,7 @@ function focusBlur(myForm, elementName, popupId) {
     });
 }
 
+//popup confirmation for Reset after click.
 var formRest = document.getElementById("formRest");
 formRest.addEventListener("click", function (event) {
     event.preventDefault();
@@ -36,6 +37,8 @@ formRest.addEventListener("click", function (event) {
         myForm.reset();
     }
 })
+
+//Popup reminder for hover reset button befroe click.
 formRest.addEventListener("mouseover", function (event) {
     var popup = document.getElementById("resetPopupText");
     popup.classList.toggle("show");
@@ -47,14 +50,19 @@ formRest.addEventListener("mouseout", function (event) {
     console.log(popup);
 })
 
+
+//validate the postal code and then ask confirmation for submit.
 var formSubmit = document.getElementById("formSubmit");
 formSubmit.addEventListener("click", function (event) {
     event.preventDefault();
-    var regExPostalCode=/^[A-Z]\d[A-Z] ?\d[A-Z]\d$/;
-    if (regExPostalCode.test(myForm.customerPostalCode.value)){
-        myForm.submit();
+    var regExPostalCode = /^[a-zA-Z]\d[a-zA-Z] ?\d[a-zA-Z]\d$/;
+    if (regExPostalCode.test(myForm.customerPostalCode.value)) {
+        var answer = confirm("Are you sure to Submit the form");
+        if (answer) {
+            myForm.submit();
+        }
     }
-    else{
+    else {
         alert("Please input a correct Potal Cde in Format:T3K1H1");
     }
 })
