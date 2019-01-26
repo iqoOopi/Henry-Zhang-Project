@@ -1,14 +1,14 @@
 var imgArray = new Array();
 imgArray[0] = "pic/grid-img/beijing.jpg";
-imgArray[1] = "pic/grid-img/bnaff.jpeg";
+imgArray[1] = "pic/grid-img/bnaff.jpg";
 imgArray[2] = "pic/grid-img/leshan.jpg";
 imgArray[3] = "pic/grid-img/taishan.jpg";
 
 var imgDescri = new Array();
-imgDescri[0] = "num 1 image:Beijing";
-imgDescri[1] = "num 2 image: Bnaff";
-imgDescri[2] = "num 3 image:LeShan";
-imgDescri[3] = "num 4 image:TaiShan";
+imgDescri[0] = "num 1 image";
+imgDescri[1] = "num 2 image";
+imgDescri[2] = "num 3 image";
+imgDescri[3] = "num 4 image";
 
 
 var imgLink = new Array();
