@@ -41,7 +41,6 @@ for (var i = 0; i <= imgArray.length; i++) {
     if (i < imgArray.length) {
         img = document.createElement("img");
         img.setAttribute("src", imgArray[i]);
-        // img.setAttribute("id", "bannerImg" + i);
         img.addEventListener("mouseover", showDescript);
         img.addEventListener("click", showWebsite);
         img.style.width = "200px";
@@ -51,7 +50,6 @@ for (var i = 0; i <= imgArray.length; i++) {
     if (i == 0) {
         var td = tr.insertCell();
         td.setAttribute('rowSpan', imgArray.length);
-        // td.setAttribute("id", "description");
         td.appendChild(document.createTextNode("Click One Image For Description"));
         td.style.fontSize = "40px";
     }
@@ -65,9 +63,6 @@ function showDescript() {
     var rowNumber = currentImage.parentNode.parentNode.rowIndex;
     console.log(currentImage.parentNode.parentNode);
     console.log(rowNumber);
-
-    // var id = currentImage.getAttribute("id").substring(9);
-    // var td = document.getElementById("description");
 
     //get content from particular table positon
     tbl.rows[1].cells[1].innerHTML = imgDescri[rowNumber - 1];
