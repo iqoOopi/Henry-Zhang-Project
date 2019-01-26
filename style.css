@@ -67,6 +67,9 @@ header img{
   }
 .grid-image2 img{
     max-width:100%;
-    
-  
+}
+#customerService{
+    width:100px;
+    height:auto;
+    position: fixed;
 }
