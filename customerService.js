@@ -6,21 +6,48 @@ var goUp = true;
 var goLeft = true;
 
 
+cs.style.bottom = localStorage.csPositionBottom+"px";
+cs.style.right = localStorage.csPositionRight+"px";
+
+// parse string to boolean
+if(localStorage.csGoUp=="true"){
+    goUp=true;
+}
+else{
+    goUp=false;
+}
+
+if(localStorage.csGoLeft=="true"){
+    goLeft=true;
+}
+else{
+    goLeft=false;
+}
+
 //Customer need to click the contact button so stop moving when mouseover
 
-cs.addEventListener("mouseover",function(){
+cs.addEventListener("mouseover", function () {
     clearInterval(csTimer);
 });
-cs.addEventListener("mouseout",function(){
+cs.addEventListener("mouseout", function () {
     csTimer = setInterval(moveCS, 10);
 })
 
 
-
 var csTimer = setInterval(moveCS, 10);
 
+
+//save current position before window close as String
+window.onbeforeunload = function () {
+    localStorage.setItem("csPositionBottom", parseInt(cs.style.bottom));
+    localStorage.setItem("csPositionRight", parseInt(cs.style.right));
+    localStorage.setItem("csGoUp", goUp);
+    localStorage.setItem("csGoLeft", goLeft);
+}
+
+
 function moveCS() {
-    if (parseInt(cs.style.right) <= 0){
+    if (parseInt(cs.style.right) <= 0) {
         goLeft = true;
     }
     if (parseInt(cs.style.right) >= document.body.offsetWidth - cs.offsetWidth) {
@@ -32,7 +59,7 @@ function moveCS() {
         goUp = false;
     }
     if (parseInt(cs.style.bottom) <= 0) {
-        goUp=true;
+        goUp = true;
     }
 
     if (goUp) {
