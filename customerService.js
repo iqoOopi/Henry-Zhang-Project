@@ -4,14 +4,20 @@ cs.style.bottom = 0 + "px";
 cs.style.right = 0 + "px";
 var goUp = true;
 var goLeft = true;
-// console.log(+cs.style.top+" tab "+cs.offsetHeight);
 
 
-// console.log(window.innerHeight);
-// console.log(document.body.offsetHeight);
-// console.log(window.innerWidth);
-// console.log(document.body.offsetWidth);
-var csTimer = setInterval(moveCS, 5);
+//Customer need to click the contact button so stop moving when mouseover
+
+cs.addEventListener("mouseover",function(){
+    clearInterval(csTimer);
+});
+cs.addEventListener("mouseout",function(){
+    csTimer = setInterval(moveCS, 10);
+})
+
+
+
+var csTimer = setInterval(moveCS, 10);
 
 function moveCS() {
     if (parseInt(cs.style.right) <= 0){
