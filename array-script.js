@@ -12,10 +12,10 @@ imgDescri[3] = "num 4 image:TaiShan";
 
 
 var imgLink = new Array();
-imgLink[0] = "https://www.google.ca/";
-imgLink[1] = "http://www.baidu.com/";
-imgLink[2] = "https://www.bing.com/";
-imgLink[3] = "https://ca.yahoo.com/";
+imgLink[0] = "https://en.wikipedia.org/wiki/Great_Wall_of_China";
+imgLink[1] = "https://www.pc.gc.ca/en/pn-np/ab/banff/index";
+imgLink[2] = "http://www.leshandafo.com/";
+imgLink[3] = "https://whc.unesco.org/en/list/437";
 
 
 var position = document.getElementById("main-banner");

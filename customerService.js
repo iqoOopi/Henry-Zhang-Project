@@ -1,11 +1,4 @@
 var cs = document.getElementById("customerService");
-console.log(cs);
-cs.style.bottom = 0 + "px";
-cs.style.right = 0 + "px";
-var goUp = true;
-var goLeft = true;
-
-
 cs.style.bottom = localStorage.csPositionBottom+"px";
 cs.style.right = localStorage.csPositionRight+"px";
 
@@ -25,7 +18,6 @@ else{
 }
 
 //Customer need to click the contact button so stop moving when mouseover
-
 cs.addEventListener("mouseover", function () {
     clearInterval(csTimer);
 });
@@ -74,6 +66,4 @@ function moveCS() {
     } else {
         cs.style.right = parseInt(cs.style.right) - 1 + "px";
     }
-
-
 }
