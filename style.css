@@ -73,3 +73,20 @@ header img{
     height:auto;
     position: fixed;
 }
+footer p {
+    font-size: 1em;
+}
+
+/* responsive image table design for small screen */
+@media screen and (max-width: 600px) {
+#picTable img{
+    max-width: 100px;
+    height:auto;
+}    
+#picTable td{
+    font-size: 1em!important;
+}
+footer p{
+    font-size: 10px;
+}
+}

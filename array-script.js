@@ -28,6 +28,7 @@ tbl.style.marginLeft = "auto";
 tbl.style.marginRight = "auto";
 tbl.style.border="1px solid black";
 tbl.style.borderCollapse="collapse";
+tbl.setAttribute("id","picTable");
 
 tr = tbl.insertRow();
 th = document.createElement("th");
@@ -60,7 +61,7 @@ for (var i = 0; i <imgArray.length; i++) {
         td.style.border="1px solid black";
         td.setAttribute('rowSpan', imgArray.length);
         td.appendChild(document.createTextNode("Click One Image For Description"));
-        td.style.fontSize = "40px";
+        td.style.fontSize = "2em";
     }
 
 }
